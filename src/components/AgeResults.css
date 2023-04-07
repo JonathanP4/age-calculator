@@ -2,6 +2,10 @@
   display: grid;
 }
 
+.d-none {
+  display: none;
+}
+
 .age-text {
   font-size: 2rem;
   color: var(--Off-black);
