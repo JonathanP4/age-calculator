@@ -25,19 +25,19 @@ const AgeResults: React.FC<{ data: ageObj }> = (props) => {
       {condition && (
         <div className="results-container">
           <div>
-            <span className="age-text text__highlight">{data.years}</span>
+            <h1 className="age-text text__highlight">{data.years}</h1>
             <span className="age-text">
               {+data.years !== 1 ? "years" : "year"}
             </span>
           </div>
           <div>
-            <span className="age-text text__highlight">{data.months}</span>
+            <h1 className="age-text text__highlight">{data.months}</h1>
             <span className="age-text">
               {+data.months !== 1 ? "months" : "month"}
             </span>
           </div>
           <div>
-            <span className="age-text text__highlight">{data.days}</span>
+            <h1 className="age-text text__highlight">{data.days}</h1>
             <span className="age-text">
               {+data.months !== 1 ? "days" : "day"}
             </span>

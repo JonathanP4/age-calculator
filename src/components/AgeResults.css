@@ -8,6 +8,7 @@
 
 .age-text {
   font-size: 2rem;
+  display: inline;
   color: var(--Off-black);
   font-weight: 800;
   font-style: italic;

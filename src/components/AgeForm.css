@@ -73,3 +73,8 @@ input[type="submit"] {
     width: 100px;
   }
 }
+@media (min-width: 1440px) {
+  .inputs input {
+    width: 140px;
+  }
+}
