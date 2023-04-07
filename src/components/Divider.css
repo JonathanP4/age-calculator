@@ -1,0 +1,41 @@
+.divider-container {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-grey: hsl(0, 0%, 86%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.divider__border {
+  position: absolute;
+  z-index: 5;
+  bottom: 50%;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background: var(--Light-grey);
+}
+
+.divider-container div:has(img) {
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  background: var(--Purple);
+  border-radius: 50%;
+  padding: 0.8rem;
+  display: grid;
+  place-content: center;
+}
+
+img {
+  width: 30px;
+  aspect-ratio: 1;
+}
+
+@media (min-width: 550px) {
+  .divider-container {
+    justify-content: flex-end;
+    margin: 0;
+  }
+}

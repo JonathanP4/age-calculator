@@ -1,0 +1,15 @@
+.results-container {
+  display: grid;
+}
+
+.age-text {
+  font-size: 2rem;
+  color: var(--Off-black);
+  font-weight: 800;
+  font-style: italic;
+}
+
+.age-text.text__highlight {
+  margin-right: 0.4rem;
+  color: var(--Purple);
+}
