@@ -26,14 +26,12 @@ const App = () => {
     setState(result);
   };
   return (
-    <div>
-      <Card>
-        <AgeForm onSubmitEvent={submitHandler} />
-        <Divider onClickEvent={submitHandler} />
-        <AgeResults data={state} />
-      </Card>
+    <Card>
+      <AgeForm onSubmitEvent={submitHandler} />
+      <Divider onClickEvent={submitHandler} />
+      <AgeResults data={state} />
       <Attribution />
-    </div>
+    </Card>
   );
 };
 export default App;
