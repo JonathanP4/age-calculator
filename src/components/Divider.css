@@ -28,6 +28,9 @@
   place-content: center;
 }
 
+.divider-container div:has(img):hover {
+  background: var(--Off-black);
+}
 img {
   width: 30px;
   aspect-ratio: 1;
