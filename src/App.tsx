@@ -6,6 +6,7 @@ import AgeResults from "./components/AgeResults/AgeResults";
 import CalculateDiff from "./ts/age-calculator";
 import { useState } from "react";
 import { ValidateApril } from "./ts/validate";
+import Attribution from "./components/Attribution/Attribution";
 
 const initialValues = {
   years: "--",
@@ -30,11 +31,14 @@ const App = () => {
     setState(result);
   };
   return (
-    <Card>
-      <BirthDateForm onSubmitEvent={submitHandler} />
-      <Button onClickEvent={submitHandler} />
-      <AgeResults data={state} />
-    </Card>
+    <div>
+      <Card>
+        <BirthDateForm onSubmitEvent={submitHandler} />
+        <Button onClickEvent={submitHandler} />
+        <AgeResults data={state} />
+      </Card>
+      <Attribution />
+    </div>
   );
 };
 export default App;

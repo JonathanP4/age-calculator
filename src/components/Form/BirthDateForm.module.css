@@ -43,7 +43,7 @@ label {
 }
 
 .inputItem input::placeholder {
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
 .inputItem input:focus {
