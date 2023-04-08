@@ -5,6 +5,7 @@ import AgeResults from "./components/AgeResults/AgeResults";
 
 import CalculateDiff from "./ts/age-calculator";
 import { useState } from "react";
+import { ValidateApril } from "./ts/validate";
 
 const initialValues = {
   years: "--",
@@ -18,6 +19,10 @@ const App = () => {
     const year = document.getElementById("year")! as HTMLInputElement;
     const month = document.getElementById("month")! as HTMLInputElement;
     const day = document.getElementById("day")! as HTMLInputElement;
+
+    const isValidDate = ValidateApril(day, month);
+    console.log(isValidDate);
+    if (!isValidDate) return;
 
     const input = [+year.value, +month.value, +day.value];
     const result = CalculateDiff(input);

@@ -5,17 +5,25 @@ form {
   gap: 13px;
 }
 
-label {
+.inputItem {
+  width: calc(90% / 3);
+  max-width: 125px;
   color: var(--Smokey-grey);
+}
+
+label {
   text-transform: uppercase;
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.125rem;
 }
 
-.inputItem {
-  width: calc(90% / 3);
-  max-width: 106px;
+.inputItem.invalid {
+  color: var(--Light-red);
+}
+
+.inputItem.invalid input {
+  border-color: var(--Light-red);
 }
 
 .inputItem input {
@@ -28,13 +36,10 @@ label {
   padding-left: 0.6rem;
 }
 
-.inputItem input.invalid {
-  border-color: red !important;
-}
-
 .inputItem span {
   color: var(--Light-red);
-  font-size: 0.7rem;
+  font-size: 11px;
+  display: inline-block;
 }
 
 .inputItem input::placeholder {
