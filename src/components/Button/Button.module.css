@@ -1,13 +1,20 @@
-.divider-container {
+.buttonContainer {
   --Purple: hsl(259, 100%, 65%);
   --Light-grey: hsl(0, 0%, 86%);
   position: relative;
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
-.divider__border {
+@media (min-width: 530px) {
+  .buttonContainer {
+    justify-content: flex-end;
+    margin: 0;
+  }
+}
+
+.dividerBorder {
   position: absolute;
   z-index: 5;
   bottom: 50%;
@@ -17,7 +24,7 @@
   background: var(--Light-grey);
 }
 
-.divider-container div:has(img) {
+.buttonContainer div:has(img) {
   cursor: pointer;
   position: relative;
   z-index: 10;
@@ -28,17 +35,11 @@
   place-content: center;
 }
 
-.divider-container div:has(img):hover {
+.buttonContainer div:has(img):hover {
   background: var(--Off-black);
 }
-img {
-  width: 30px;
-  aspect-ratio: 1;
-}
 
-@media (min-width: 550px) {
-  .divider-container {
-    justify-content: flex-end;
-    margin: 0;
-  }
+img {
+  width: 25px;
+  aspect-ratio: 1;
 }

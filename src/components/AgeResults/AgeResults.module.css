@@ -1,20 +1,23 @@
-.results-container {
+.resultsContainer {
   display: grid;
 }
 
-.d-none {
+.dNone {
   display: none;
 }
 
-.age-text {
-  font-size: 2rem;
+.ageText {
+  margin: 0;
+  padding: 0;
+  line-height: min(11vmin, 70px);
+  font-size: min(10vmin, 59px);
   display: inline;
   color: var(--Off-black);
   font-weight: 800;
   font-style: italic;
 }
 
-.age-text.text__highlight {
+.ageText.textHighlight {
   margin-right: 0.4rem;
   color: var(--Purple);
 }

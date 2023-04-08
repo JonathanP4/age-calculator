@@ -1,4 +1,4 @@
-import "./AgeResults.css";
+import styles from "./AgeResults.module.css";
 
 type ageObj = {
   years: string;
@@ -23,22 +23,28 @@ const AgeResults: React.FC<{ data: ageObj }> = (props) => {
         </div>
       )}
       {condition && (
-        <div className="results-container">
+        <div className={styles.resultsContainer}>
           <div>
-            <h1 className="age-text text__highlight">{data.years}</h1>
-            <span className="age-text">
+            <h1 className={`${styles.ageText} ${styles.textHighlight}`}>
+              {data.years}
+            </h1>
+            <span className={styles.ageText}>
               {+data.years !== 1 ? "years" : "year"}
             </span>
           </div>
           <div>
-            <h1 className="age-text text__highlight">{data.months}</h1>
-            <span className="age-text">
+            <h1 className={`${styles.ageText} ${styles.textHighlight}`}>
+              {data.months}
+            </h1>
+            <span className={styles.ageText}>
               {+data.months !== 1 ? "months" : "month"}
             </span>
           </div>
           <div>
-            <h1 className="age-text text__highlight">{data.days}</h1>
-            <span className="age-text">
+            <h1 className={`${styles.ageText} ${styles.textHighlight}`}>
+              {data.days}
+            </h1>
+            <span className={styles.ageText}>
               {+data.months !== 1 ? "days" : "day"}
             </span>
           </div>

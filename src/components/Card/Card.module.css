@@ -1,0 +1,15 @@
+.card {
+  background: var(--White);
+  width: 90vmin;
+  max-width: 517px;
+  max-height: 405px;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  border-bottom-right-radius: 27%;
+}
+
+@media (min-width: 1240px) {
+  .card {
+    width: 80vmin;
+  }
+}

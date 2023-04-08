@@ -46,6 +46,7 @@
   --Smokey-grey: hsl(0, 1%, 44%);
   --Off-black: hsl(0, 0%, 8%);
   font-size: 20px;
+  min-height: 500px;
 
   background: var(--Off-white);
 }
@@ -54,7 +55,7 @@ body {
   display: grid;
   place-content: center;
   height: 100svh;
-  overflow: hidden;
+  min-height: 500px;
 }
 
 img,
@@ -76,8 +77,11 @@ input:focus {
   outline: 0;
 }
 
-@media (min-width: 1440px) {
-  :root {
+@media (min-width: 1024px) {
+  /* :root {
     font-size: 30px;
+  } */
+  body {
+    height: 100vh;
   }
 }
