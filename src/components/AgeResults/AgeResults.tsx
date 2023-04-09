@@ -8,6 +8,7 @@ type ageObj = {
 
 const AgeResults: React.FC<{ data: ageObj }> = (props) => {
   const data = props.data;
+
   let condition = true;
   if (data.years !== "--" && +data.years > 0) {
     condition = true;

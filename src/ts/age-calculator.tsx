@@ -7,14 +7,14 @@ const CalculateDiff = (date: number[]) => {
   let monthsDiff = monthNow - date[1];
   let daysDiff = dayNow - date[2];
 
-  if (monthsDiff < 0) {
-    yearsDiff -= 1;
-    monthsDiff = 12 - Math.abs(monthsDiff);
-  }
   if (daysDiff < 0) {
     monthsDiff -= 1;
     daysDiff =
       monthNow !== 4 ? 30 - Math.abs(daysDiff) : 31 - Math.abs(daysDiff);
+  }
+  if (monthsDiff < 0) {
+    yearsDiff -= 1;
+    monthsDiff = 12 - Math.abs(monthsDiff);
   }
 
   const result = {

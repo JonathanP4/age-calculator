@@ -5,7 +5,7 @@ import AgeResults from "./components/AgeResults/AgeResults";
 
 import CalculateDiff from "./ts/age-calculator";
 import { useState } from "react";
-import { ValidateApril } from "./ts/validate";
+import { ValidateSubmission } from "./ts/validate";
 import Attribution from "./components/Attribution/Attribution";
 
 const initialValues = {
@@ -17,16 +17,20 @@ const initialValues = {
 const App = () => {
   const [state, setState] = useState(initialValues);
   const submitHandler = () => {
-    const year = document.getElementById("year")! as HTMLInputElement;
-    const month = document.getElementById("month")! as HTMLInputElement;
-    const day = document.getElementById("day")! as HTMLInputElement;
+    const dayInput = document.getElementById("day")! as HTMLInputElement;
+    const monthInput = document.getElementById("month")! as HTMLInputElement;
+    const yearInput = document.getElementById("year")! as HTMLInputElement;
 
-    const isValidDate = ValidateApril(day, month);
-    console.log(isValidDate);
-    if (!isValidDate) return;
+    const inputArr = [dayInput, monthInput, yearInput];
+    const isValid = inputArr.map((el) => ValidateSubmission(el, el.id));
 
-    const input = [+year.value, +month.value, +day.value];
-    const result = CalculateDiff(input);
+    if (!isValid.every((el) => el === true)) return;
+
+    const result = CalculateDiff([
+      +yearInput.value,
+      +monthInput.value,
+      +dayInput.value,
+    ]);
 
     setState(result);
   };
